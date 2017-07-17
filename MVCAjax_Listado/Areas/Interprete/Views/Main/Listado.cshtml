@@ -1,0 +1,81 @@
+﻿@model IEnumerable<CoreCine.Interprete>
+@using CoreCine
+@{
+    List<Protagonista> ListaProtagonista = (List<Protagonista>)ViewBag.ListadoProtagonista;
+}
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Paterno)
+        </th>
+        @*<th>
+                @Html.DisplayNameFor(model => model.Materno)
+            </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.Nombres)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nacionalidad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Foto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Bio)
+        </th>
+        <th>Protagonistas</th>
+        @*<th></th>*@
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Paterno)
+            </td>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.Materno)
+                </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombres)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nacionalidad)
+            </td>
+            <td>
+                @if (item.Foto != null)
+                {
+                    <img src="~/Fotos/@item.Foto" height="70" width="50" data-nombre="@item.Foto" />
+                }
+                else
+                {
+                    <img src="~/Fotos/Default.jpg" height="70" width="50" />
+                }
+
+            </td>
+            <td>
+                <a href="@item.Bio" target="_blank">Ver Bio</a>
+            </td>
+            <td>
+                @foreach (Protagonista item2 in ListaProtagonista.Where(x => x.CodInterprete == item.CodInterprete).ToList())
+                {
+                    <label>  @item2.NombreProtagonista</label>
+                    if (item2.EsPrincipal == true)
+                    {
+                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                    }
+                }
+            </td>
+            @*<td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.CodInterprete }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.CodInterprete }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.CodInterprete })
+                </td>*@
+        </tr>
+    }
+
+</table>

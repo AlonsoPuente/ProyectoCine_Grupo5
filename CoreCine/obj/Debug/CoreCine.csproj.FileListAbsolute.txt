@@ -1,0 +1,12 @@
+c:\users\l4d3n\documents\visual studio 2013\Projects\MVCAjax_Listado\CoreCine\bin\Debug\CoreCine.dll.config
+c:\users\l4d3n\documents\visual studio 2013\Projects\MVCAjax_Listado\CoreCine\bin\Debug\CoreCine.dll
+c:\users\l4d3n\documents\visual studio 2013\Projects\MVCAjax_Listado\CoreCine\bin\Debug\CoreCine.pdb
+c:\users\l4d3n\documents\visual studio 2013\Projects\MVCAjax_Listado\CoreCine\bin\Debug\EntityFramework.dll
+c:\users\l4d3n\documents\visual studio 2013\Projects\MVCAjax_Listado\CoreCine\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\l4d3n\documents\visual studio 2013\Projects\MVCAjax_Listado\CoreCine\bin\Debug\EntityFramework.xml
+c:\users\l4d3n\documents\visual studio 2013\Projects\MVCAjax_Listado\CoreCine\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\l4d3n\documents\visual studio 2013\Projects\MVCAjax_Listado\CoreCine\bin\Debug\es\EntityFramework.resources.dll
+c:\users\l4d3n\documents\visual studio 2013\Projects\MVCAjax_Listado\CoreCine\bin\Debug\es\EntityFramework.SqlServer.resources.dll
+c:\users\l4d3n\documents\visual studio 2013\Projects\MVCAjax_Listado\CoreCine\obj\Debug\CoreCine.csprojResolveAssemblyReference.cache
+c:\users\l4d3n\documents\visual studio 2013\Projects\MVCAjax_Listado\CoreCine\obj\Debug\CoreCine.dll
+c:\users\l4d3n\documents\visual studio 2013\Projects\MVCAjax_Listado\CoreCine\obj\Debug\CoreCine.pdb

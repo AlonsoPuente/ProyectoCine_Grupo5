@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Listado de Int&eacute;rpretes</h2>
+<br />
+<div id="divListadoInterprete">
+
+
+</div>
+
+
+<script>
+    ListadoInterprete();
+
+    function ListadoInterprete() {
+
+        $.ajax({
+            url: "/Interprete/Main/Listado",
+            cache: false,
+            success: function (html) {
+                $("#divListadoInterprete").html(html);
+            }
+        });
+
+    }
+
+
+
+</script>
+
+
