@@ -10,6 +10,7 @@ namespace MVCAjax_Listado.Areas.Cine.Controllers
     public class MainController : Controller
     {
         // GET: Cine/Main
+        ////////////////////////// Listado de Cine
         public ActionResult Index()
         {
             return View();
@@ -20,6 +21,23 @@ namespace MVCAjax_Listado.Areas.Cine.Controllers
             return PartialView(DACine.ListadoCine());            
         }
 
-        /// Listado de Cine
+        ///////////////////////// Actualizar Cine        
+        public ActionResult ActualizarCine(int CodCine)
+        {            
+            CoreCine.Cine cine = DACine.ListadoCine().Where(x => x.CodCine == CodCine).FirstOrDefault();
+            return View(cine);
+        }
+
+        [HttpPost]
+        public ActionResult ActualizarCine(CoreCine.Cine cine)
+        {
+            //para cargar la data
+            bool exito = DACine.ActualizarCine(cine);
+            return RedirectToAction("Index");
+
+        }
+
+
+
     }
 }

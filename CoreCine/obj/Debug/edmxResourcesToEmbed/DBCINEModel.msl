@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CineDATABASEModelStoreContainer" CdmEntityContainer="CineDATABASEEntities1">
+    <EntitySetMapping Name="Asiento">
+      <EntityTypeMapping TypeName="CineDATABASEModel.Asiento">
+        <MappingFragment StoreEntitySet="Asiento">
+          <ScalarProperty Name="CodAsiento" ColumnName="CodAsiento" />
+          <ScalarProperty Name="DescripcionAsiento" ColumnName="DescripcionAsiento" />
+          <ScalarProperty Name="CodSala" ColumnName="CodSala" />
+          <ScalarProperty Name="TipoAsiento" ColumnName="TipoAsiento" />
+          <ScalarProperty Name="Disponible" ColumnName="Disponible" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cine">
+      <EntityTypeMapping TypeName="CineDATABASEModel.Cine">
+        <MappingFragment StoreEntitySet="Cine">
+          <ScalarProperty Name="CodCine" ColumnName="CodCine" />
+          <ScalarProperty Name="NombreCine" ColumnName="NombreCine" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CinePelicula">
+      <EntityTypeMapping TypeName="CineDATABASEModel.CinePelicula">
+        <MappingFragment StoreEntitySet="CinePelicula">
+          <ScalarProperty Name="CodCine" ColumnName="CodCine" />
+          <ScalarProperty Name="CodPelicula" ColumnName="CodPelicula" />
+          <ScalarProperty Name="EnCartelera" ColumnName="EnCartelera" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Director">
+      <EntityTypeMapping TypeName="CineDATABASEModel.Director">
+        <MappingFragment StoreEntitySet="Director">
+          <ScalarProperty Name="CodDirector" ColumnName="CodDirector" />
+          <ScalarProperty Name="NombreDirector" ColumnName="NombreDirector" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Funcion">
+      <EntityTypeMapping TypeName="CineDATABASEModel.Funcion">
+        <MappingFragment StoreEntitySet="Funcion">
+          <ScalarProperty Name="CodFuncion" ColumnName="CodFuncion" />
+          <ScalarProperty Name="HoraInicio" ColumnName="HoraInicio" />
+          <ScalarProperty Name="HoraFin" ColumnName="HoraFin" />
+          <ScalarProperty Name="CodPelicula" ColumnName="CodPelicula" />
+          <ScalarProperty Name="FechaFuncion" ColumnName="FechaFuncion" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Interprete">
+      <EntityTypeMapping TypeName="CineDATABASEModel.Interprete">
+        <MappingFragment StoreEntitySet="Interprete">
+          <ScalarProperty Name="CodInterprete" ColumnName="CodInterprete" />
+          <ScalarProperty Name="Paterno" ColumnName="Paterno" />
+          <ScalarProperty Name="Materno" ColumnName="Materno" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="Nacionalidad" ColumnName="Nacionalidad" />
+          <ScalarProperty Name="Foto" ColumnName="Foto" />
+          <ScalarProperty Name="Bio" ColumnName="Bio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pedido">
+      <EntityTypeMapping TypeName="CineDATABASEModel.Pedido">
+        <MappingFragment StoreEntitySet="Pedido">
+          <ScalarProperty Name="CodPedido" ColumnName="CodPedido" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="CodTicket" ColumnName="CodTicket" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pelicula">
+      <EntityTypeMapping TypeName="CineDATABASEModel.Pelicula">
+        <MappingFragment StoreEntitySet="Pelicula">
+          <ScalarProperty Name="CodPelicula" ColumnName="CodPelicula" />
+          <ScalarProperty Name="NombrePelicula" ColumnName="NombrePelicula" />
+          <ScalarProperty Name="Duracion" ColumnName="Duracion" />
+          <ScalarProperty Name="FechaEstreno" ColumnName="FechaEstreno" />
+          <ScalarProperty Name="CodDirector" ColumnName="CodDirector" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Persona">
+      <EntityTypeMapping TypeName="CineDATABASEModel.Persona">
+        <MappingFragment StoreEntitySet="Persona">
+          <ScalarProperty Name="CodPersona" ColumnName="CodPersona" />
+          <ScalarProperty Name="Paterno" ColumnName="Paterno" />
+          <ScalarProperty Name="Materno" ColumnName="Materno" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="NroDocumento" ColumnName="NroDocumento" />
+          <ScalarProperty Name="foto" ColumnName="foto" />
+          <ScalarProperty Name="doc" ColumnName="doc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Protagonista">
+      <EntityTypeMapping TypeName="CineDATABASEModel.Protagonista">
+        <MappingFragment StoreEntitySet="Protagonista">
+          <ScalarProperty Name="CodInterprete" ColumnName="CodInterprete" />
+          <ScalarProperty Name="CodPelicula" ColumnName="CodPelicula" />
+          <ScalarProperty Name="NombreProtagonista" ColumnName="NombreProtagonista" />
+          <ScalarProperty Name="EsPrincipal" ColumnName="EsPrincipal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sala">
+      <EntityTypeMapping TypeName="CineDATABASEModel.Sala">
+        <MappingFragment StoreEntitySet="Sala">
+          <ScalarProperty Name="CodSala" ColumnName="CodSala" />
+          <ScalarProperty Name="NombreSala" ColumnName="NombreSala" />
+          <ScalarProperty Name="Capacidad" ColumnName="Capacidad" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="CodCine" ColumnName="CodCine" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ticket">
+      <EntityTypeMapping TypeName="CineDATABASEModel.Ticket">
+        <MappingFragment StoreEntitySet="Ticket">
+          <ScalarProperty Name="CodTicket" ColumnName="CodTicket" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="CodAsiento" ColumnName="CodAsiento" />
+          <ScalarProperty Name="CodPersona" ColumnName="CodPersona" />
+          <ScalarProperty Name="CodFuncion" ColumnName="CodFuncion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

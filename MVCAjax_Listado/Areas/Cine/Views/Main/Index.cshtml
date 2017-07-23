@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>LISTADO DE LOS CINES</h2>
+<div id="divListadoCine">
+</div>
+
+
+<script>
+    ListadoCine();
+
+    function ListadoCine() {
+
+        $.ajax({
+            url: "/Cine/Main/ListadoCine",
+            cache: false,
+            success: function (html) {
+                $("#divListadoCine").html(html);
+            }
+        });
+
+    }
+
+</script>

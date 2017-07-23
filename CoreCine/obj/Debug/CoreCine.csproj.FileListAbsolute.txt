@@ -10,3 +10,15 @@ c:\users\l4d3n\documents\visual studio 2013\Projects\MVCAjax_Listado\CoreCine\bi
 c:\users\l4d3n\documents\visual studio 2013\Projects\MVCAjax_Listado\CoreCine\obj\Debug\CoreCine.csprojResolveAssemblyReference.cache
 c:\users\l4d3n\documents\visual studio 2013\Projects\MVCAjax_Listado\CoreCine\obj\Debug\CoreCine.dll
 c:\users\l4d3n\documents\visual studio 2013\Projects\MVCAjax_Listado\CoreCine\obj\Debug\CoreCine.pdb
+C:\Users\Neisser\Source\Repos\ProyectoCine_Grupo5\CoreCine\bin\Debug\CoreCine.dll.config
+C:\Users\Neisser\Source\Repos\ProyectoCine_Grupo5\CoreCine\bin\Debug\CoreCine.dll
+C:\Users\Neisser\Source\Repos\ProyectoCine_Grupo5\CoreCine\bin\Debug\CoreCine.pdb
+C:\Users\Neisser\Source\Repos\ProyectoCine_Grupo5\CoreCine\bin\Debug\EntityFramework.dll
+C:\Users\Neisser\Source\Repos\ProyectoCine_Grupo5\CoreCine\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Neisser\Source\Repos\ProyectoCine_Grupo5\CoreCine\bin\Debug\EntityFramework.xml
+C:\Users\Neisser\Source\Repos\ProyectoCine_Grupo5\CoreCine\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Neisser\Source\Repos\ProyectoCine_Grupo5\CoreCine\bin\Debug\es\EntityFramework.resources.dll
+C:\Users\Neisser\Source\Repos\ProyectoCine_Grupo5\CoreCine\bin\Debug\es\EntityFramework.SqlServer.resources.dll
+C:\Users\Neisser\Source\Repos\ProyectoCine_Grupo5\CoreCine\obj\Debug\CoreCine.csprojResolveAssemblyReference.cache
+C:\Users\Neisser\Source\Repos\ProyectoCine_Grupo5\CoreCine\obj\Debug\CoreCine.dll
+C:\Users\Neisser\Source\Repos\ProyectoCine_Grupo5\CoreCine\obj\Debug\CoreCine.pdb
