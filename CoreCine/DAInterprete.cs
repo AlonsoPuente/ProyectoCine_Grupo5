@@ -8,7 +8,7 @@ namespace CoreCine
 {
     public class DAInterprete
     {
-        static public List<Interprete> listadoInterprete()
+        static public List<Interprete> ListadoInterprete()
         {
             List<Interprete> listado = new List<Interprete>();
 

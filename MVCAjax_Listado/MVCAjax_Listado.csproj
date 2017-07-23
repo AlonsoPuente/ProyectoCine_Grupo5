@@ -213,6 +213,7 @@
     <Content Include="Areas\Persona\Views\Main\ListadoPersona.cshtml" />
     <Content Include="Areas\Persona\Views\Main\ActualizarPersona.cshtml" />
     <Content Include="Areas\Persona\Views\Main\RegistrarPersona.cshtml" />
+    <Content Include="Areas\Interprete\Views\Main\ActualizarInterprete.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

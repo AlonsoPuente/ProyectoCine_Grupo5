@@ -17,37 +17,38 @@ namespace MVCAjax_Listado.Areas.Interprete.Controllers
 
         public ActionResult Listado()
         {
-            ViewBag.ListadoInterprete = DAInterprete.listadoInterprete();
-            return PartialView(DAInterprete.listadoInterprete());
+            ViewBag.ListadoInterprete = DAInterprete.ListadoInterprete();
+            return PartialView(DAInterprete.ListadoInterprete());
         }
+
+        ///////////////////////// Registrar Intérprete
         public ActionResult RegistrarInterprete()
         {
             return PartialView();
         }
+        
+        ///////////////////////// Actualizar Intérprete      
+        public ActionResult ActualizarInterprete(int CodInterprete)
+        {
+            CoreCine.Interprete interprete = DAInterprete.ListadoInterprete().Where(x => x.CodInterprete == CodInterprete).FirstOrDefault();
+            return View(interprete);
+        }
+
+        [HttpPost]
+        public ActionResult ActualizarInterprete(CoreCine.Interprete interprete)
+        {
+            //para cargar la data
+            bool exito = DAInterprete.ActualizarInterprete(interprete);
+            return RedirectToAction("Index");
+
+        }
+
+        //////////////////////// Eliminar Intérprete
         public ActionResult EliminarInterprete(int ID)
         {
             bool exito = DAInterprete.EliminarInterprete(ID);
             return RedirectToAction("Index");
         }
-        //public ActionResult EditarInterprete(int ID)
-        //{
-        //    Interprete proyecto = DAInterprete.listadoInterprete().Where(x => x.CodInterprete == ID).FirstOrDefault();
-        //    return View(proyecto);
-        //}
-
-        //public ActionResult EditarProyecto(Interprete interprete)
-        //{
-        //    //para cargar la data
-        //    bool exito = DAInterprete.ActualizarInterprete(interprete);
-        //    return RedirectToAction("Index");
-
-        //}
-
-
-
-
-
     }
-
 
 }
