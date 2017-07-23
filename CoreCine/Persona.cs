@@ -37,10 +37,10 @@ namespace CoreCine
         [Required]
         [DataType(DataType.Date)]
         public Nullable<System.DateTime> FechaNacimiento { get; set; }
-        public Nullable<int> NroDocumento { get; set; }
-        public string foto { get; set; }
         [Required]
         [StringLength(8)]
+        public Nullable<int> NroDocumento { get; set; }
+        public string foto { get; set; }
         public string doc { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
