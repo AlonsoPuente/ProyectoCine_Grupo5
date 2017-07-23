@@ -37,6 +37,55 @@ namespace MVCAjax_Listado.Areas.Cine.Controllers
 
         }
 
+        ////////////////////////// Eliminar cineeeeeeeeeeeeeeeee
+
+        public ActionResult Eliminar(int CodCine)
+        {
+            bool exito = DACine.EliminarCine(CodCine);
+
+            return RedirectToAction("Index");
+
+
+        }
+
+        ////////////////////////// Registrar pedido
+
+
+        public JsonResult GrabarCine(string NombreCine,
+            string Direccion)
+        {
+            CoreCine.Cine cine = new CoreCine.Cine();
+
+
+            cine.NombreCine = NombreCine;
+            cine.Direccion = Direccion;
+
+            // texto satisfactorio
+
+            bool exito = DACine.RegistrarCine(cine);
+
+            string mensaje = string.Empty;
+
+            if (exito)
+            {
+                mensaje = "Registro satisfactorio";
+            }
+            else
+            {
+                mensaje = "Ha ocurrido un error. Intente nuevamente";
+            }
+
+            return Json(mensaje, JsonRequestBehavior.AllowGet);
+
+        }
+
+        public ActionResult FormCine()
+        {
+
+            return PartialView();
+
+        }
+
 
 
     }

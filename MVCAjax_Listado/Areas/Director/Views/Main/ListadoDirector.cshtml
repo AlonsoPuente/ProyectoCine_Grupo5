@@ -1,0 +1,29 @@
+﻿@model IEnumerable<CoreCine.Director>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreDirector)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreDirector)
+        </td>
+        <td>
+          
+            @Html.ActionLink("ActualizarDirector", "ActualizarDirector", "Main", new { area = "Director", CodDirector = item.CodDirector }, null) |
+           
+            
+       
+            
+            @Html.ActionLink("Eliminar director", "Eliminar", new { area = "Director", CodDirector = item.CodDirector }, null)
+        </td>
+    </tr>
+}
+
+</table>

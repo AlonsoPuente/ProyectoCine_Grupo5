@@ -161,6 +161,8 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Cine\CineAreaRegistration.cs" />
     <Compile Include="Areas\Cine\Controllers\MainController.cs" />
+    <Compile Include="Areas\Director\Controllers\MainController.cs" />
+    <Compile Include="Areas\Director\DirectorAreaRegistration.cs" />
     <Compile Include="Areas\Interprete\Controllers\MainController.cs" />
     <Compile Include="Areas\Interprete\InterpreteAreaRegistration.cs" />
     <Compile Include="Areas\Pedido\Controllers\MainController.cs" />
@@ -223,6 +225,14 @@
     <Content Include="Areas\Pedido\Views\Main\ActualizarPedido.cshtml" />
     <Content Include="Areas\Pedido\Views\Main\ListadoPedido.cshtml" />
     <Content Include="Areas\Pedido\Views\Main\FormPedido.cshtml" />
+    <Content Include="Areas\Director\Views\web.config" />
+    <Content Include="Areas\Director\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Director\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Director\Views\Main\Index.cshtml" />
+    <Content Include="Areas\Director\Views\Main\ListadoDirector.cshtml" />
+    <Content Include="Areas\Director\Views\Main\ActualizarDirector.cshtml" />
+    <Content Include="Areas\Director\Views\Main\FormDirector.cshtml" />
+    <Content Include="Areas\Cine\Views\Main\FormCine.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -274,6 +284,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Cine\Models\" />
+    <Folder Include="Areas\Director\Models\" />
     <Folder Include="Areas\Interprete\Models\" />
     <Folder Include="Areas\Pedido\Models\" />
     <Folder Include="Areas\Persona\Models\" />

@@ -3,11 +3,11 @@
     ViewBag.Title = "Index";
 }
 
-<h2>LISTADO DE LOS CINES</h2>
+<h2>LISTADO DE LOS DIRECTORES</h2>
 
-<input type="button" class="btn btn btn-info" name="name" value="Nuevo Cine" id="btnRegistro" />
+<input type="button" class="btn btn btn-info" name="name" value="Nuevo director" id="btnRegistro" />
 
-<div id="divListadoCine">
+<div id="divListadoDirector">
 </div>
 
 
@@ -16,7 +16,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="gridSystemModalLabel">Añadiendo nuevo cine</h4>
+                <h4 class="modal-title" id="gridSystemModalLabel">Añadiendo nuevo director</h4>
             </div>
             <div class="modal-body">
                 <div class="row">
@@ -58,15 +58,15 @@
 
 
 <script>
-    ListadoCine();
+    ListadoDirector();
 
-    function ListadoCine() {
+    function ListadoDirector() {
 
         $.ajax({
-            url: "/Cine/Main/ListadoCine",
+            url: "/Director/Main/ListadoDirector",
             cache: false,
             success: function (html) {
-                $("#divListadoCine").html(html);
+                $("#divListadoDirector").html(html);
             }
         });
 
@@ -78,7 +78,7 @@
         var modal = $("#modalForm");
         $.ajax({
             type: "POST",
-            url: "/Cine/Main/FormCine",
+            url: "/Director/Main/FormDirector",
             success: function (html) {
                 modal.find(".modal-body").html(html);
                 modal.modal();
@@ -91,16 +91,15 @@
 
         var modal = $("#modalForm");
 
-        var vNombreCine = modal.find(".modal-body #NombreCine").val()
-        var vDireccion = modal.find(".modal-body #Direccion").val()
+        var vNombreDirector = modal.find(".modal-body #NombreDirector").val()
+       
 
         $.ajax({
             type: "POST",
-            url: "/Cine/Main/GrabarCine",
+            url: "/Director/Main/GrabarDirector",
 
             data: {
-                NombreCine: vNombreCine,
-                Direccion: vDireccion
+                NombreDirector: vNombreDirector,
 
             },
 
@@ -109,7 +108,7 @@
                 //modal.modal();
                 //modal.hide();
 
-                ListadoCine();
+                ListadoDirector();
 
                 alert("Datos correctamento guardados")
             }
@@ -121,3 +120,5 @@
 
 
 </script>
+
+

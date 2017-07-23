@@ -1,8 +1,6 @@
 ﻿@model IEnumerable<CoreCine.Cine>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+
 <table class="table">
     <tr>
         <th>
@@ -23,9 +21,10 @@
             @Html.DisplayFor(modelItem => item.Direccion)
         </td>
         <td>
+
+
             @Html.ActionLink("ActualizarCine", "ActualizarCine","Main", new {area = "Cine", CodCine=item.CodCine },null) |
-            @Html.ActionLink("Details", "Details", new { id=item.CodCine }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.CodCine })
+            @Html.ActionLink("EliminarCine", "Eliminar", new { area = "Cine", CodCine = item.CodCine }, null)
         </td>
     </tr>
 }
