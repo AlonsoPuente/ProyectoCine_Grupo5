@@ -13,7 +13,7 @@ namespace CoreCine
         static public List<Cine> ListadoCine()
         {
             List<Cine> listadoCine = new List<Cine>();
-            using (var data = new CineDATABASEEntities1())
+            using (var data = new CineDATABASEEntities())
             {
 
                 listadoCine = data.Cine.ToList();
@@ -32,7 +32,7 @@ namespace CoreCine
 
             try
             {
-                using (var data = new CineDATABASEEntities1())
+                using (var data = new CineDATABASEEntities())
                 {
                     data.Cine.Add(cine);
                     data.SaveChanges();
@@ -53,7 +53,7 @@ namespace CoreCine
             bool exito = true;           
             try
             {
-                using (var data = new CineDATABASEEntities1())
+                using (var data = new CineDATABASEEntities())
                 {
                     // realizar la consulta y actualizar
                     Cine actual = data.Cine.Where(x => x.CodCine == cine.CodCine).FirstOrDefault();// alias
@@ -78,7 +78,7 @@ namespace CoreCine
             try
             {
 
-                using (var data = new CineDATABASEEntities1())
+                using (var data = new CineDATABASEEntities())
                 {
                     Cine cine = data.Cine.Where(x => x.CodCine == Codcine).FirstOrDefault();// alias
 

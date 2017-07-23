@@ -163,6 +163,8 @@
     <Compile Include="Areas\Cine\Controllers\MainController.cs" />
     <Compile Include="Areas\Interprete\Controllers\MainController.cs" />
     <Compile Include="Areas\Interprete\InterpreteAreaRegistration.cs" />
+    <Compile Include="Areas\Pedido\Controllers\MainController.cs" />
+    <Compile Include="Areas\Pedido\PedidoAreaRegistration.cs" />
     <Compile Include="Areas\Persona\Controllers\MainController.cs" />
     <Compile Include="Areas\Persona\PersonaAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -214,6 +216,13 @@
     <Content Include="Areas\Persona\Views\Main\ActualizarPersona.cshtml" />
     <Content Include="Areas\Persona\Views\Main\RegistrarPersona.cshtml" />
     <Content Include="Areas\Interprete\Views\Main\ActualizarInterprete.cshtml" />
+    <Content Include="Areas\Pedido\Views\web.config" />
+    <Content Include="Areas\Pedido\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Pedido\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Pedido\Views\Main\Index.cshtml" />
+    <Content Include="Areas\Pedido\Views\Main\ActualizarPedido.cshtml" />
+    <Content Include="Areas\Pedido\Views\Main\ListadoPedido.cshtml" />
+    <Content Include="Areas\Pedido\Views\Main\FormPedido.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -266,6 +275,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Cine\Models\" />
     <Folder Include="Areas\Interprete\Models\" />
+    <Folder Include="Areas\Pedido\Models\" />
     <Folder Include="Areas\Persona\Models\" />
   </ItemGroup>
   <ItemGroup>
