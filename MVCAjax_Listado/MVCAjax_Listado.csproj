@@ -207,6 +207,11 @@
     <Content Include="Areas\Cine\Views\Main\ActualizarCine.cshtml" />
     <Content Include="Areas\Interprete\Views\Main\RegistrarInterprete.cshtml" />
     <Content Include="Areas\Persona\Views\web.config" />
+    <Content Include="Areas\Persona\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Persona\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Persona\Views\Main\Index.cshtml" />
+    <Content Include="Areas\Persona\Views\Main\ListadoPersona.cshtml" />
+    <Content Include="Areas\Persona\Views\Main\ActualizarPersona.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -260,8 +265,6 @@
     <Folder Include="Areas\Cine\Models\" />
     <Folder Include="Areas\Interprete\Models\" />
     <Folder Include="Areas\Persona\Models\" />
-    <Folder Include="Areas\Persona\Views\Main\" />
-    <Folder Include="Areas\Persona\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

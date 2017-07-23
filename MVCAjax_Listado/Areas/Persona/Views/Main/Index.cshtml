@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<h2>LISTADO DE LAS PERSONAS REGISTRADAS</h2>
+<div id="divListadoPersona">
+</div>
+
+<script>
+    ListadoPersona();
+
+    function ListadoPersona() {
+
+        $.ajax({
+            url: "/Persona/Main/ListadoPersona",
+            cache: false,
+            success: function (html) {
+                $("#divListadoPersona").html(html);
+            }
+        });
+
+    }
+
+</script>
