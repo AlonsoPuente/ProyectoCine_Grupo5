@@ -14,6 +14,7 @@ namespace CoreCine
     
     public partial class Director
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Director()
         {
             this.Pelicula = new HashSet<Pelicula>();
@@ -22,6 +23,7 @@ namespace CoreCine
         public int CodDirector { get; set; }
         public string NombreDirector { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Pelicula> Pelicula { get; set; }
     }
 }

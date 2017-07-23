@@ -14,6 +14,7 @@ namespace CoreCine
     
     public partial class Asiento
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Asiento()
         {
             this.Ticket = new HashSet<Ticket>();
@@ -26,6 +27,7 @@ namespace CoreCine
         public Nullable<bool> Disponible { get; set; }
     
         public virtual Sala Sala { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Ticket> Ticket { get; set; }
     }
 }

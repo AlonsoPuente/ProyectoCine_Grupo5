@@ -14,6 +14,7 @@ namespace CoreCine
     
     public partial class Interprete
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Interprete()
         {
             this.Protagonista = new HashSet<Protagonista>();
@@ -27,6 +28,7 @@ namespace CoreCine
         public string Foto { get; set; }
         public string Bio { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Protagonista> Protagonista { get; set; }
     }
 }

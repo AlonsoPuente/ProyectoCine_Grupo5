@@ -14,6 +14,7 @@ namespace CoreCine
     
     public partial class Funcion
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Funcion()
         {
             this.Ticket = new HashSet<Ticket>();
@@ -27,6 +28,7 @@ namespace CoreCine
         public Nullable<decimal> Precio { get; set; }
     
         public virtual Pelicula Pelicula { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Ticket> Ticket { get; set; }
     }
 }

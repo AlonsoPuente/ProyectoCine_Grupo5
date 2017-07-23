@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -158,6 +159,8 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\Cine\CineAreaRegistration.cs" />
+    <Compile Include="Areas\Cine\Controllers\MainController.cs" />
     <Compile Include="Areas\Interprete\Controllers\MainController.cs" />
     <Compile Include="Areas\Interprete\InterpreteAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -194,6 +197,7 @@
     <Content Include="Areas\Interprete\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Interprete\Views\Main\Listado.cshtml" />
     <Content Include="Areas\Interprete\Views\Main\Index.cshtml" />
+    <Content Include="Areas\Cine\Views\web.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -244,6 +248,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Cine\Models\" />
+    <Folder Include="Areas\Cine\Views\Main\" />
+    <Folder Include="Areas\Cine\Views\Shared\" />
     <Folder Include="Areas\Interprete\Models\" />
   </ItemGroup>
   <ItemGroup>

@@ -14,6 +14,7 @@ namespace CoreCine
     
     public partial class Sala
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Sala()
         {
             this.Asiento = new HashSet<Asiento>();
@@ -25,6 +26,7 @@ namespace CoreCine
         public string Tipo { get; set; }
         public Nullable<int> CodCine { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Asiento> Asiento { get; set; }
         public virtual Cine Cine { get; set; }
     }

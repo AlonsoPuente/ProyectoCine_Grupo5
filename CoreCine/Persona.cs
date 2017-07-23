@@ -14,6 +14,7 @@ namespace CoreCine
     
     public partial class Persona
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Persona()
         {
             this.Ticket = new HashSet<Ticket>();
@@ -30,6 +31,7 @@ namespace CoreCine
         public string foto { get; set; }
         public string doc { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Ticket> Ticket { get; set; }
     }
 }

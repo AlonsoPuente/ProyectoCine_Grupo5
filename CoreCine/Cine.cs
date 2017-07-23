@@ -14,6 +14,7 @@ namespace CoreCine
     
     public partial class Cine
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Cine()
         {
             this.CinePelicula = new HashSet<CinePelicula>();
@@ -24,7 +25,9 @@ namespace CoreCine
         public string NombreCine { get; set; }
         public string Direccion { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CinePelicula> CinePelicula { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Sala> Sala { get; set; }
     }
 }

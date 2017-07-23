@@ -11,6 +11,7 @@
     <WebStackScaffolding_ViewDialogWidth>600</WebStackScaffolding_ViewDialogWidth>
     <WebStackScaffolding_DbContextTypeFullName>CoreCine.CineDBEntities</WebStackScaffolding_DbContextTypeFullName>
     <ProjectView>ShowAllFiles</ProjectView>
+    <UseIISExpress>true</UseIISExpress>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>
