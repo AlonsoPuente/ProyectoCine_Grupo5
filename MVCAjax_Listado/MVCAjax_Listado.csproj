@@ -203,6 +203,7 @@
     <Content Include="Areas\Cine\Views\Main\Index.cshtml" />
     <Content Include="Areas\Cine\Views\Main\ListadoCine.cshtml" />
     <Content Include="Areas\Cine\Views\Main\ActualizarCine.cshtml" />
+    <Content Include="Areas\Interprete\Views\Main\RegistrarInterprete.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

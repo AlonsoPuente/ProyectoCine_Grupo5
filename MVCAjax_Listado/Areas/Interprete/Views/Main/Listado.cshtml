@@ -12,9 +12,9 @@
         <th>
             @Html.DisplayNameFor(model => model.Paterno)
         </th>
-        @*<th>
+        <th>
                 @Html.DisplayNameFor(model => model.Materno)
-            </th>*@
+            </th>
         <th>
             @Html.DisplayNameFor(model => model.Nombres)
         </th>
@@ -37,9 +37,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Paterno)
             </td>
-            @*<td>
+            <td>
                     @Html.DisplayFor(modelItem => item.Materno)
-                </td>*@
+                </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Nombres)
             </td>
@@ -70,11 +70,11 @@
                     }
                 }
             </td>
-            @*<td>
+            <td>
                     @Html.ActionLink("Edit", "Edit", new { id = item.CodInterprete }) |
                     @Html.ActionLink("Details", "Details", new { id = item.CodInterprete }) |
                     @Html.ActionLink("Delete", "Delete", new { id = item.CodInterprete })
-                </td>*@
+                </td>
         </tr>
     }
 

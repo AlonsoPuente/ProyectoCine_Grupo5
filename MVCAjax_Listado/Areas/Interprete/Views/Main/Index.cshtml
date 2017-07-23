@@ -3,6 +3,7 @@
 }
 
 <h2>Listado de l</h2>
+<input type="button" class="btn btn btn-info" name="name" value="Nuevo Interprerte" id="btnRegistro" />
 <br />
 <div id="divListadoInterprete">
 
@@ -24,6 +25,18 @@
         });
 
     }
+    $('#btnRegistro').click(function () {
+        var modal = $("#modalForm");
+        $.ajax({
+            type: "POST",
+            url: "/Administrador/Main/RegistroInterprete",
+            success: function (html) {
+                modal.find(".modal-body").html(html);
+                modal.modal();
+            }
+        });
+    });
+
 
 
 
