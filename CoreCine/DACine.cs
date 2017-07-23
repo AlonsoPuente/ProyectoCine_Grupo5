@@ -23,7 +23,30 @@ namespace CoreCine
             return listadoCine;
         }
 
-        /// Actualizar de Cine
+        /// Registrar Cine
+        //////////////////////////////////////////////////////
+
+        static public bool RegistrarCine(Cine cine)
+        {
+            bool exito = true;
+
+            try
+            {
+                using (var data = new CineDATABASEEntities1())
+                {
+                    data.Cine.Add(cine);
+                    data.SaveChanges();
+                }
+            }
+            catch
+            {
+                exito = false;
+            }
+
+            return exito;
+        }
+
+        /// Actualizar Cine
         //////////////////////////////////////////////////////
         static public bool ActualizarCine(Cine cine) // referido a objeto
         {
@@ -47,14 +70,30 @@ namespace CoreCine
 
         }
 
-        /// Crear Cine
-        //////////////////////////////////////////////////////
-
         /// Eliminar Cine
         //////////////////////////////////////////////////////
+        static public bool EliminarCine(int Codcine) // referido a borrar
+        {
+            bool exito = true;
+            try
+            {
 
+                using (var data = new CineDATABASEEntities1())
+                {
+                    Cine cine = data.Cine.Where(x => x.CodCine == Codcine).FirstOrDefault();// alias
 
+                    data.Cine.Remove(cine);
+                    data.SaveChanges();
+                }
+            }
+            catch (Exception)
+            {
 
+                exito = false;
+            }
+
+            return exito;
+        }
 
     }
 }

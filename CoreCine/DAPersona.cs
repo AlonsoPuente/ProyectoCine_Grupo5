@@ -45,7 +45,7 @@ namespace CoreCine
             return exito;
         }
 
-        /// Actualizador de Persona
+        /// Actualizar Persona
         //////////////////////////////////////////////////////
         static public bool ActualizarPersona(Persona persona) // referido a objeto
         {
