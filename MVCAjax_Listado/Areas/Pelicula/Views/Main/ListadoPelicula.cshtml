@@ -1,0 +1,55 @@
+﻿@model IEnumerable<CoreCine.Pelicula>
+@using CoreCine
+@{ 
+
+    List<Director> ListaDirector = (List<Director>)ViewBag.ListadoDirector;
+
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NombrePelicula)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Duracion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaEstreno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Director.NombreDirector)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombrePelicula)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Duracion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaEstreno)
+        </td>
+
+        <td>
+            @foreach (Director item2 in ListaDirector.Where(z=>z.CodDirector == item.CodDirector).ToList())
+            {
+                @item2.NombreDirector
+            }
+         
+        </td>
+
+        <td>
+
+            @Html.ActionLink("Actualizar Pelicula", "ActualizarPelicula", "Main", new { area = "Pelicula", CodPelicula = item.CodPelicula }, null) |
+            @Html.ActionLink("Eliminar Pelicula", "Eliminar", new { area = "Pelicula", CodPelicula = item.CodPelicula }, null)
+
+        </td>
+    </tr>
+}
+
+</table>

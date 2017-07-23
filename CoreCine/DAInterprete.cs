@@ -12,7 +12,7 @@ namespace CoreCine
         {
             List<Interprete> listado = new List<Interprete>();
 
-            using (var data = new CineDATABASEEntities1())
+            using (var data = new CineDATABASEEntities())
 
             {
                 listado = data.Interprete.ToList();
@@ -26,7 +26,7 @@ namespace CoreCine
 
             try
             {
-                using (var data = new CineDATABASEEntities1())
+                using (var data = new CineDATABASEEntities())
                 {
                     data.Interprete.Add(interprete);
                     data.SaveChanges();
@@ -45,7 +45,7 @@ namespace CoreCine
             try
             {
 
-                using (var data = new CineDATABASEEntities1())
+                using (var data = new CineDATABASEEntities())
                 {
                     Interprete interprete = data.Interprete.Where(x => x.CodInterprete == Codinterprete).FirstOrDefault();// alias
 
@@ -67,7 +67,7 @@ namespace CoreCine
             bool exito = true; 
             try
             {
-                using (var data = new CineDATABASEEntities1())
+                using (var data = new CineDATABASEEntities())
                 {
 
                     Interprete actual = data.Interprete.Where(x => x.CodInterprete == interprete.CodInterprete).FirstOrDefault();
