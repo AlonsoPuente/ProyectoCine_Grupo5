@@ -34,3 +34,15 @@ C:\Users\user\Desktop\CIne\CoreCine\bin\Debug\es\EntityFramework.SqlServer.resou
 C:\Users\user\Desktop\CIne\CoreCine\obj\Debug\CoreCine.csprojResolveAssemblyReference.cache
 C:\Users\user\Desktop\CIne\CoreCine\obj\Debug\CoreCine.dll
 C:\Users\user\Desktop\CIne\CoreCine\obj\Debug\CoreCine.pdb
+G:\Repositorio GitHub\ProyectoCine_Grupo5\CoreCine\bin\Debug\CoreCine.dll.config
+G:\Repositorio GitHub\ProyectoCine_Grupo5\CoreCine\bin\Debug\CoreCine.dll
+G:\Repositorio GitHub\ProyectoCine_Grupo5\CoreCine\bin\Debug\CoreCine.pdb
+G:\Repositorio GitHub\ProyectoCine_Grupo5\CoreCine\bin\Debug\EntityFramework.dll
+G:\Repositorio GitHub\ProyectoCine_Grupo5\CoreCine\bin\Debug\EntityFramework.SqlServer.dll
+G:\Repositorio GitHub\ProyectoCine_Grupo5\CoreCine\bin\Debug\EntityFramework.xml
+G:\Repositorio GitHub\ProyectoCine_Grupo5\CoreCine\bin\Debug\EntityFramework.SqlServer.xml
+G:\Repositorio GitHub\ProyectoCine_Grupo5\CoreCine\bin\Debug\es\EntityFramework.resources.dll
+G:\Repositorio GitHub\ProyectoCine_Grupo5\CoreCine\bin\Debug\es\EntityFramework.SqlServer.resources.dll
+G:\Repositorio GitHub\ProyectoCine_Grupo5\CoreCine\obj\Debug\CoreCine.csprojResolveAssemblyReference.cache
+G:\Repositorio GitHub\ProyectoCine_Grupo5\CoreCine\obj\Debug\CoreCine.dll
+G:\Repositorio GitHub\ProyectoCine_Grupo5\CoreCine\obj\Debug\CoreCine.pdb

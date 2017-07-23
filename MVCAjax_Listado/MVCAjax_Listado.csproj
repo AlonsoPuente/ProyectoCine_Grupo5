@@ -163,6 +163,8 @@
     <Compile Include="Areas\Cine\Controllers\MainController.cs" />
     <Compile Include="Areas\Interprete\Controllers\MainController.cs" />
     <Compile Include="Areas\Interprete\InterpreteAreaRegistration.cs" />
+    <Compile Include="Areas\Persona\Controllers\MainController.cs" />
+    <Compile Include="Areas\Persona\PersonaAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -204,6 +206,7 @@
     <Content Include="Areas\Cine\Views\Main\ListadoCine.cshtml" />
     <Content Include="Areas\Cine\Views\Main\ActualizarCine.cshtml" />
     <Content Include="Areas\Interprete\Views\Main\RegistrarInterprete.cshtml" />
+    <Content Include="Areas\Persona\Views\web.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -256,6 +259,9 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Cine\Models\" />
     <Folder Include="Areas\Interprete\Models\" />
+    <Folder Include="Areas\Persona\Models\" />
+    <Folder Include="Areas\Persona\Views\Main\" />
+    <Folder Include="Areas\Persona\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

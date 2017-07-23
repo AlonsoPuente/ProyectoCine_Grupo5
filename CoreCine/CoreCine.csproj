@@ -60,6 +60,7 @@
     <Compile Include="DAInterprete.cs" />
     <Compile Include="DACine.cs" />
     <Compile Include="DAGeneral.cs" />
+    <Compile Include="DAPersona.cs" />
     <Compile Include="DBCINEModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
