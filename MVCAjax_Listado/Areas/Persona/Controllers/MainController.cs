@@ -20,7 +20,13 @@ namespace MVCAjax_Listado.Areas.Persona.Controllers
             return PartialView(DAPersona.ListadoPersona());
         }
 
-        ///////////////////////// Actualizar Cine        
+        ///////////////////////// Registrar Persona
+        public ActionResult RegistrarPersona()
+        {
+            return PartialView();
+        }
+
+        ///////////////////////// Actualizar Persona        
         public ActionResult ActualizarPersona(int CodPersona)
         {
             CoreCine.Persona persona = DAPersona.ListadoPersona().Where(x => x.CodPersona == CodPersona).FirstOrDefault();
@@ -34,6 +40,13 @@ namespace MVCAjax_Listado.Areas.Persona.Controllers
             bool exito = DAPersona.ActualizarPersona(persona);
             return RedirectToAction("Index");
 
+        }
+
+        ///////////////////////// Eliminar Persona  
+        public ActionResult EliminarPersona(int ID)
+        {
+            bool exito = DAPersona.EliminarPersona(ID);
+            return RedirectToAction("Index");
         }
     }
 }
