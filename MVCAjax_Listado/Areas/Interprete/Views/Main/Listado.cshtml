@@ -1,8 +1,5 @@
 ﻿@model IEnumerable<CoreCine.Interprete>
-@using CoreCine
-@{
-    List<Protagonista> ListaProtagonista = (List<Protagonista>)ViewBag.ListadoProtagonista;
-}
+
 
 
 <table class="table">
@@ -58,20 +55,10 @@
             <td>
                 <a href="@item.Bio" target="_blank">Ver Bio</a>
             </td>
-            <td>
-                @foreach (Protagonista item2 in ListaProtagonista.Where(x => x.CodInterprete == item.CodInterprete).ToList())
-                {
-                    <label>  @item2.NombreProtagonista</label>
-                    if (item2.EsPrincipal == true)
-                    {
-                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-                    }
-                }
-            </td>
+
             <td>
 
-                @Html.ActionLink("ActualizarPedido", "ActualizarPedido", "Main", new { area = "Pedido", CodPedido = item.CodPedido }, null) |
-                @Html.ActionLink("Eliminar Pedido", "Eliminar", new { area = "Pedido", CodPedido = item.CodPedido }, null)
+               
 
                     @Html.ActionLink("Edit", "Edit", new { id = item.CodInterprete }) |
                     @Html.ActionLink("Details", "Details", new { id = item.CodInterprete }) |
