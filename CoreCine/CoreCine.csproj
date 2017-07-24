@@ -69,6 +69,7 @@
     <Compile Include="DAPersona.cs" />
     <Compile Include="DAProtagonista.cs" />
     <Compile Include="DASala.cs" />
+    <Compile Include="DATicket.cs" />
     <Compile Include="DBCINEModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

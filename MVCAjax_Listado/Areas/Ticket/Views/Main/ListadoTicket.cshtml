@@ -1,0 +1,70 @@
+﻿@model IEnumerable<CoreCine.Ticket>
+@using CoreCine
+@{
+
+    List<Asiento> ListadoAsiento = (List<Asiento>)ViewBag.ListadoAsiento;
+    List<Persona> ListadoPersona = (List<Persona>)ViewBag.ListadoPersona;
+    List<Funcion> ListadoFuncion = (List<Funcion>)ViewBag.ListadoFuncion;
+
+}
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Asiento.DescripcionAsiento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Funcion.CodFuncion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Persona.Paterno)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descripcion)
+        </td>
+        <td>
+
+            @foreach (Asiento item2 in ListadoAsiento.Where(z => z.CodAsiento == item.CodAsiento).ToList())
+            {
+                @item2.TipoAsiento
+            }
+
+
+        </td>
+        <td>
+            @foreach (Funcion item2 in ListadoFuncion.Where(z => z.CodFuncion == item.CodFuncion).ToList())
+            {
+                @item2.Precio
+            }
+
+        </td>
+        <td>
+
+            @foreach (Persona item2 in ListadoPersona.Where(z => z.CodPersona == item.CodPersona).ToList())
+            {
+                @item2.Nombres
+            }
+
+        </td>
+        <td>
+
+
+            @Html.ActionLink("Actualizar Ticket", "ActualizarTicket", "Main", new { area = "Ticket", CodTicket = item.CodTicket }, null) |
+            @Html.ActionLink("Eliminar Ticket", "Eliminar", new { area = "Ticket", CodTicket = item.CodTicket }, null)
+
+
+
+        </td>
+    </tr>
+}
+
+</table>

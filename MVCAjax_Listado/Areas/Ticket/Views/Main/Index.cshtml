@@ -1,0 +1,130 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>LISTADO DE LOS TICKET</h2>
+
+<input type="button" class="btn btn btn-info" name="name" value="Nuevo ticket" id="btnRegistro" />
+
+<div id="divListadoTicket">
+</div>
+
+
+<div id="modalForm" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="gridSystemModalLabel">Añadiendo nuevo ticket</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-4">.col-md-4</div>
+                    <div class="col-md-4 col-md-offset-4">.col-md-4 .col-md-offset-4</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-md-offset-3">.col-md-3 .col-md-offset-3</div>
+                    <div class="col-md-2 col-md-offset-4">.col-md-2 .col-md-offset-4</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">.col-md-6 .col-md-offset-3</div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-9">
+                        Level 1: .col-sm-9
+                        <div class="row">
+                            <div class="col-xs-8 col-sm-6">
+                                Level 2: .col-xs-8 .col-sm-6
+                            </div>
+                            <div class="col-xs-4 col-sm-6">
+                                Level 2: .col-xs-4 .col-sm-6
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+
+                <button type="button" class="btn btn-primary" id="btnGuardar">Guardar</button>
+
+
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<script>
+    ListadoTicket();
+
+    function ListadoTicket() {
+
+        $.ajax({
+            url: "/Ticket/Main/ListadoTicket",
+            cache: false,
+            success: function (html) {
+                $("#divListadoTicket").html(html);
+            }
+        });
+
+
+    }
+
+    $('#btnRegistro').click(function () {
+        //alert("Ando bien")
+        var modal = $("#modalForm");
+        $.ajax({
+            type: "POST",
+            url: "/Ticket/Main/FormTicket",
+            success: function (html) {
+                modal.find(".modal-body").html(html);
+                modal.modal();
+            }
+        });
+    });
+
+    $('#btnGuardar').click(function () {
+
+
+        var modal = $("#modalForm");
+
+        var vDescripcion = modal.find(".modal-body #Descripcion").val()
+        var vCodAsiento = modal.find(".modal-body #CodAsiento").val()
+        var vCodPersona = modal.find(".modal-body #CodPersona").val()
+        var vCodFuncion = modal.find(".modal-body #CodFuncion").val()
+
+        $.ajax({
+            type: "POST",
+            url: "/Ticket/Main/GrabarTicket",
+
+            data: {
+
+                Descripcion: vDescripcion,
+                CodAsiento: vCodAsiento,
+                CodPersona: vCodPersona,
+                CodFuncion: vCodFuncion
+
+            },
+
+            success: function (html) {
+                //modal.find(".modal-body").html(html);
+                //modal.modal();
+                //modal.hide();
+
+                ListadoTicket();
+
+                alert("Datos correctamento guardados")
+            }
+
+        });
+
+    });
+
+
+
+</script>
+
+

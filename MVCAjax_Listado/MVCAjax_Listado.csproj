@@ -181,6 +181,8 @@
     <Compile Include="Areas\Protagonista\ProtagonistaAreaRegistration.cs" />
     <Compile Include="Areas\Sala\Controllers\MainController.cs" />
     <Compile Include="Areas\Sala\SalaAreaRegistration.cs" />
+    <Compile Include="Areas\Ticket\Controllers\MainController.cs" />
+    <Compile Include="Areas\Ticket\TicketAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -287,6 +289,13 @@
     <Content Include="Areas\Funcion\Views\Main\ListadoFuncion.cshtml" />
     <Content Include="Areas\Funcion\Views\Main\ActualizarFuncion.cshtml" />
     <Content Include="Areas\Funcion\Views\Main\FormFuncion.cshtml" />
+    <Content Include="Areas\Ticket\Views\web.config" />
+    <Content Include="Areas\Ticket\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Ticket\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Ticket\Views\Main\Index.cshtml" />
+    <Content Include="Areas\Ticket\Views\Main\ListadoTicket.cshtml" />
+    <Content Include="Areas\Ticket\Views\Main\ActualizarTicket.cshtml" />
+    <Content Include="Areas\Ticket\Views\Main\FormTicket.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -348,6 +357,7 @@
     <Folder Include="Areas\Persona\Models\" />
     <Folder Include="Areas\Protagonista\Models\" />
     <Folder Include="Areas\Sala\Models\" />
+    <Folder Include="Areas\Ticket\Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
