@@ -58,7 +58,14 @@
                 @Html.DisplayFor(modelItem => item.NroDocumento)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.foto)
+                @if (item.foto != null)
+                {
+                    <img src="~/FotosPersonas/@item.foto" height="70" width="50" data-nombre="@item.foto" />
+                }
+                else
+                {
+                    <img src="~/FotosPersonas/NoImage.png" height="70" width="50" />
+                }
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.doc)

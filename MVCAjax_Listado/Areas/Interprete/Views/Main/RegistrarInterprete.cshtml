@@ -44,6 +44,10 @@
 
         <div class="form-group">
             @Html.LabelFor(model => model.Foto, "Foto del interprerte", htmlAttributes: new { @class = "control-label col-md-2" })
+            <form enctype="multipart/form-data" action="uploader.php" method="POST">
+                <input name="uploadedfile" type="file" />
+                <input type="submit" value="Subir archivo" />
+            </form>
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Foto, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Foto, "", new { @class = "text-danger" })

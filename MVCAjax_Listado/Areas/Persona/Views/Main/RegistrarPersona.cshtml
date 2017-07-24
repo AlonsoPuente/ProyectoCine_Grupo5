@@ -67,6 +67,10 @@
 
         <div class="form-group">
             @Html.LabelFor(model => model.foto, "Foto de la persona", htmlAttributes: new { @class = "control-label col-md-2" })
+            <form enctype="multipart/form-data" action="uploader.php" method="POST">
+                <input name="uploadedfile" type="file" />
+                <input type="submit" value="Subir archivo" />
+            </form>
             <div class="col-md-10">
                 @Html.EditorFor(model => model.foto, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.foto, "", new { @class = "text-danger" })
@@ -75,6 +79,10 @@
 
         <div class="form-group">
             @Html.LabelFor(model => model.doc, "Archivo del documento", htmlAttributes: new { @class = "control-label col-md-2" })
+            <form enctype="multipart/form-data" action="uploader.php" method="POST">
+                <input name="uploadedfile" type="file" />
+                <input type="submit" value="Subir archivo" />
+            </form>
             <div class="col-md-10">
                 @Html.EditorFor(model => model.doc, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.doc, "", new { @class = "text-danger" })

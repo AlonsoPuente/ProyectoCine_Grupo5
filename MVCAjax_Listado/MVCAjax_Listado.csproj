@@ -202,6 +202,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="FotosPersonas\NoImage.png" />
     <Content Include="Fotos\Default.jpg" />
     <Content Include="Fotos\Gal_Gadot.jpg" />
     <Content Include="Fotos\Jordana_Brewster.jpg" />
