@@ -11,7 +11,8 @@ namespace CoreCine
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Sala
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,9 +22,18 @@ namespace CoreCine
         }
     
         public int CodSala { get; set; }
+        [Required]
+        [Display(Name = "Nombre de la sala")]
         public string NombreSala { get; set; }
+        [Required]
+        [MaxLength(3)]
+        [Display(Name = "Capacidad de la sala")]
         public Nullable<int> Capacidad { get; set; }
+        [Required]
+        [Display(Name = "Tipo de la sala")]
         public string Tipo { get; set; }
+        [Required]
+        [Display(Name = "Cine (ID)")]
         public Nullable<int> CodCine { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -11,7 +11,8 @@ namespace CoreCine
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Persona
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,12 +22,29 @@ namespace CoreCine
         }
     
         public int CodPersona { get; set; }
+        [Required]
+        [Display(Name = "Apellido paterno de la persona")]
         public string Paterno { get; set; }
+        [Required]
+        [Display(Name = "Apellido materno de la persona")]
         public string Materno { get; set; }
+        [Required]
+        [Display(Name = "Nombres de la persona")]
         public string Nombres { get; set; }
+        [Required]
+        [Display(Name = "Dirección de la persona")]
         public string Direccion { get; set; }
+        [Required]
+        [EmailAddress]
+        [Display(Name ="Dirección de correo")]
         public string Email { get; set; }
+        [Required]
+        [DataType(DataType.Date)]
+        [Display(Name = "Fecha de nacimiento")]
         public Nullable<System.DateTime> FechaNacimiento { get; set; }
+        [Required]
+        [MaxLength(8)]
+        [Display(Name = "Número de documento (DNI)")]
         public Nullable<int> NroDocumento { get; set; }
         public string foto { get; set; }
         public string doc { get; set; }

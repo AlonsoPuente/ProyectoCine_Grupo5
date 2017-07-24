@@ -11,13 +11,22 @@ namespace CoreCine
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Ticket
     {
         public int CodTicket { get; set; }
+        [Required]
+        [Display(Name = "Descripción del ticket")]
         public string Descripcion { get; set; }
+        [Required]
+        [Display(Name = "Asiento (ID)")]
         public Nullable<int> CodAsiento { get; set; }
+        [Required]
+        [Display(Name = "Persona (ID)")]
         public Nullable<int> CodPersona { get; set; }
+        [Required]
+        [Display(Name = "Función (ID)")]
         public Nullable<int> CodFuncion { get; set; }
     
         public virtual Asiento Asiento { get; set; }

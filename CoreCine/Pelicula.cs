@@ -11,7 +11,8 @@ namespace CoreCine
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Pelicula
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -23,9 +24,18 @@ namespace CoreCine
         }
     
         public int CodPelicula { get; set; }
+        [Required]
+        [Display(Name = "Nombre de la película")]
         public string NombrePelicula { get; set; }
+        [Required]
+        [Display(Name = "Duración de la película")]
         public string Duracion { get; set; }
+        [Required]
+        [DataType(DataType.Date)]
+        [Display(Name = "Fecha de estreno")]
         public Nullable<System.DateTime> FechaEstreno { get; set; }
+        [Required]
+        [Display(Name = "Director (ID)")]
         public Nullable<int> CodDirector { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

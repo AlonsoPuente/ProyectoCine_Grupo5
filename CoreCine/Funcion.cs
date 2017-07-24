@@ -11,7 +11,8 @@ namespace CoreCine
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Funcion
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,10 +22,24 @@ namespace CoreCine
         }
     
         public int CodFuncion { get; set; }
+        [Required]
+        [Display(Name = "Hora de inicio")]
+        [DataType(DataType.Date)]
         public Nullable<System.DateTime> HoraInicio { get; set; }
+        [Required]
+        [Display(Name = "Hora de finalización")]
+        [DataType(DataType.Date)]
         public Nullable<System.DateTime> HoraFin { get; set; }
+        [Required]
+        [Display(Name = "Película (ID)")]
         public Nullable<int> CodPelicula { get; set; }
+        [Required]
+        [Display(Name = "Fecha de la función")]
+        [DataType(DataType.Date)]
         public Nullable<System.DateTime> FechaFuncion { get; set; }
+        [Required]
+        [Display(Name ="Precio de la función")]
+        [DataType(DataType.Currency)]
         public Nullable<decimal> Precio { get; set; }
     
         public virtual Pelicula Pelicula { get; set; }

@@ -11,11 +11,16 @@ namespace CoreCine
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class CinePelicula
     {
         public int CodCine { get; set; }
+        [Required]
+        [Display(Name = "Película (ID)")]
         public int CodPelicula { get; set; }
+        [Required]
+        [Display(Name = "¿Está en cartelera?")]
         public Nullable<bool> EnCartelera { get; set; }
     
         public virtual Cine Cine { get; set; }

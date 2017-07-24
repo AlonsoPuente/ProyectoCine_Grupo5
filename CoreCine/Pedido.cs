@@ -11,11 +11,16 @@ namespace CoreCine
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Pedido
     {
         public int CodPedido { get; set; }
+        [Required]
+        [Display(Name = "Descripción del pedido")]
         public string Descripcion { get; set; }
+        [Required]
+        [Display(Name = "Ticket (ID)")]
         public Nullable<int> CodTicket { get; set; }
     }
 }

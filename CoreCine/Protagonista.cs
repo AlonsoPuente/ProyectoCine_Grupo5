@@ -11,12 +11,19 @@ namespace CoreCine
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Protagonista
     {
         public int CodInterprete { get; set; }
+        [Required]
+        [Display(Name = "Película (ID)")]
         public int CodPelicula { get; set; }
+        [Required]
+        [Display(Name = "Nombre del protagonista")]
         public string NombreProtagonista { get; set; }
+        [Required]
+        [Display(Name = "¿Es principal?")]
         public Nullable<bool> EsPrincipal { get; set; }
     
         public virtual Interprete Interprete { get; set; }

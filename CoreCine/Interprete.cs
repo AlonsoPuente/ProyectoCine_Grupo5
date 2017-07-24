@@ -11,7 +11,8 @@ namespace CoreCine
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Interprete
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,9 +22,17 @@ namespace CoreCine
         }
     
         public int CodInterprete { get; set; }
+        [Required]
+        [Display(Name = "Apellido paterno del intérprete")]
         public string Paterno { get; set; }
+        [Required]
+        [Display(Name = "Apellido materno del intérprete")]
         public string Materno { get; set; }
+        [Required]
+        [Display(Name = "Nombres del intérprete")]
         public string Nombres { get; set; }
+        [Required]
+        [Display(Name = "Nacionalidad del intérprete")]
         public string Nacionalidad { get; set; }
         public string Foto { get; set; }
         public string Bio { get; set; }

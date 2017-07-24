@@ -11,7 +11,8 @@ namespace CoreCine
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Asiento
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,9 +22,17 @@ namespace CoreCine
         }
     
         public int CodAsiento { get; set; }
+        [Required]
+        [Display(Name = "Descripción del asiento")]
         public string DescripcionAsiento { get; set; }
+        [Required]
+        [Display(Name = "Sala (ID)")]
         public Nullable<int> CodSala { get; set; }
+        [Required]
+        [Display(Name = "Tipo de asiento")]
         public Nullable<int> TipoAsiento { get; set; }
+        [Required]
+        [Display(Name = "Disponibilidad")]
         public Nullable<bool> Disponible { get; set; }
     
         public virtual Sala Sala { get; set; }
