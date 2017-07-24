@@ -1,0 +1,59 @@
+﻿@model IEnumerable<CoreCine.Protagonista>
+@using CoreCine
+@{
+
+    List<Interprete> ListadoInterprete = (List<Interprete>)ViewBag.ListadoInterprete;
+    List<Pelicula> ListadoPelicula = (List<Pelicula>)ViewBag.ListadoPelicula;
+
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreProtagonista)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EsPrincipal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Interprete.Paterno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pelicula.NombrePelicula)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreProtagonista)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EsPrincipal)
+        </td>
+        <td>
+            @foreach (Interprete item2 in ListadoInterprete.Where(z => z.CodInterprete == item.CodInterprete).ToList())
+            {
+                @item2.Nombres
+            }
+
+
+        </td>
+        <td>
+            @foreach (Pelicula item2 in ListadoPelicula.Where(z => z.CodPelicula == item.CodPelicula).ToList())
+            {
+                @item2.NombrePelicula
+            }
+
+        </td>
+        <td>
+          
+            @Html.ActionLink("Actualizar Protagonista", "ActualizarProtagonista", "Main", new { area = "Protagonista", CodInterprete = item.CodInterprete }, null) |
+            @Html.ActionLink("Eliminar Protagonista", "Eliminar", new { area = "Protagonista", CodInterprete = item.CodInterprete }, null)
+
+        </td>
+    </tr>
+}
+
+</table>

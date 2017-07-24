@@ -175,6 +175,8 @@
     <Compile Include="Areas\Pelicula\PeliculaAreaRegistration.cs" />
     <Compile Include="Areas\Persona\Controllers\MainController.cs" />
     <Compile Include="Areas\Persona\PersonaAreaRegistration.cs" />
+    <Compile Include="Areas\Protagonista\Controllers\MainController.cs" />
+    <Compile Include="Areas\Protagonista\ProtagonistaAreaRegistration.cs" />
     <Compile Include="Areas\Sala\Controllers\MainController.cs" />
     <Compile Include="Areas\Sala\SalaAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -269,6 +271,13 @@
     <Content Include="Areas\Asiento\Views\Main\ListadoAsiento.cshtml" />
     <Content Include="Areas\Asiento\Views\Main\ActualizarAsiento.cshtml" />
     <Content Include="Areas\Asiento\Views\Main\FormAsiento.cshtml" />
+    <Content Include="Areas\Protagonista\Views\web.config" />
+    <Content Include="Areas\Protagonista\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Protagonista\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Protagonista\Views\Main\Index.cshtml" />
+    <Content Include="Areas\Protagonista\Views\Main\ListadoProtagonista.cshtml" />
+    <Content Include="Areas\Protagonista\Views\Main\ActualizarProtagonista.cshtml" />
+    <Content Include="Areas\Protagonista\Views\Main\FormProtagonista.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -327,6 +336,7 @@
     <Folder Include="Areas\Pedido\Models\" />
     <Folder Include="Areas\Pelicula\Models\" />
     <Folder Include="Areas\Persona\Models\" />
+    <Folder Include="Areas\Protagonista\Models\" />
     <Folder Include="Areas\Sala\Models\" />
   </ItemGroup>
   <ItemGroup>

@@ -66,6 +66,7 @@
     <Compile Include="DAPedido.cs" />
     <Compile Include="DAPelicula.cs" />
     <Compile Include="DAPersona.cs" />
+    <Compile Include="DAProtagonista.cs" />
     <Compile Include="DASala.cs" />
     <Compile Include="DBCINEModel.Context.cs">
       <AutoGen>True</AutoGen>
