@@ -1,0 +1,129 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<h2>LISTADO DE LAS FUNCIONES</h2>
+
+<input type="button" class="btn btn btn-info" name="name" value="Nueva funcion" id="btnRegistro" />
+
+<div id="divListadoFuncion">
+</div>
+
+
+<div id="modalForm" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="gridSystemModalLabel">Añadiendo nuevas funciones</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-4">.col-md-4</div>
+                    <div class="col-md-4 col-md-offset-4">.col-md-4 .col-md-offset-4</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-md-offset-3">.col-md-3 .col-md-offset-3</div>
+                    <div class="col-md-2 col-md-offset-4">.col-md-2 .col-md-offset-4</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">.col-md-6 .col-md-offset-3</div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-9">
+                        Level 1: .col-sm-9
+                        <div class="row">
+                            <div class="col-xs-8 col-sm-6">
+                                Level 2: .col-xs-8 .col-sm-6
+                            </div>
+                            <div class="col-xs-4 col-sm-6">
+                                Level 2: .col-xs-4 .col-sm-6
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+
+                <button type="button" class="btn btn-primary" id="btnGuardar">Guardar</button>
+
+
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<script>
+    ListadoFuncion();
+
+    function ListadoFuncion() {
+
+        $.ajax({
+            url: "/Funcion/Main/ListadoFuncion",
+            cache: false,
+            success: function (html) {
+                $("#divListadoFuncion").html(html);
+            }
+        });
+
+
+    }
+
+    $('#btnRegistro').click(function () {
+        //alert("Ando bien")
+        var modal = $("#modalForm");
+        $.ajax({
+            type: "POST",
+            url: "/Funcion/Main/FormFuncion",
+            success: function (html) {
+                modal.find(".modal-body").html(html);
+                modal.modal();
+            }
+        });
+    });
+
+    $('#btnGuardar').click(function () {
+
+
+        var modal = $("#modalForm");
+
+        var vHoraInicio = modal.find(".modal-body #HoraInicio").val()
+        var vHoraFin = modal.find(".modal-body #HoraFin").val()
+        var vCodPelicula = modal.find(".modal-body #CodPelicula").val()
+        var vFechaFuncion = modal.find(".modal-body #FechaFuncion").val()
+        var vPrecio = modal.find(".modal-body #Precio").val()
+
+        $.ajax({
+            type: "POST",
+            url: "/Funcion/Main/GrabarFuncion",
+
+            data: {
+                HoraInicio: vHoraInicio,
+                HoraFin: vHoraFin,
+                CodPelicula: vCodPelicula,
+                FechaFuncion: vFechaFuncion,
+                Precio: vPrecio
+
+            },
+
+            success: function (html) {
+                //modal.find(".modal-body").html(html);
+                //modal.modal();
+                //modal.hide();
+
+                ListadoFuncion();
+
+                alert("Datos correctamento guardados")
+            }
+
+        });
+
+    });
+
+
+
+</script>
+

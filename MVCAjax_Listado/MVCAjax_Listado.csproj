@@ -167,6 +167,8 @@
     <Compile Include="Areas\Cine\Controllers\MainController.cs" />
     <Compile Include="Areas\Director\Controllers\MainController.cs" />
     <Compile Include="Areas\Director\DirectorAreaRegistration.cs" />
+    <Compile Include="Areas\Funcion\Controllers\MainController.cs" />
+    <Compile Include="Areas\Funcion\FuncionAreaRegistration.cs" />
     <Compile Include="Areas\Interprete\Controllers\MainController.cs" />
     <Compile Include="Areas\Interprete\InterpreteAreaRegistration.cs" />
     <Compile Include="Areas\Pedido\Controllers\MainController.cs" />
@@ -278,6 +280,13 @@
     <Content Include="Areas\Protagonista\Views\Main\ListadoProtagonista.cshtml" />
     <Content Include="Areas\Protagonista\Views\Main\ActualizarProtagonista.cshtml" />
     <Content Include="Areas\Protagonista\Views\Main\FormProtagonista.cshtml" />
+    <Content Include="Areas\Funcion\Views\web.config" />
+    <Content Include="Areas\Funcion\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Funcion\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Funcion\Views\Main\Index.cshtml" />
+    <Content Include="Areas\Funcion\Views\Main\ListadoFuncion.cshtml" />
+    <Content Include="Areas\Funcion\Views\Main\ActualizarFuncion.cshtml" />
+    <Content Include="Areas\Funcion\Views\Main\FormFuncion.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -332,6 +341,7 @@
     <Folder Include="Areas\CinePelicula\Models\" />
     <Folder Include="Areas\Cine\Models\" />
     <Folder Include="Areas\Director\Models\" />
+    <Folder Include="Areas\Funcion\Models\" />
     <Folder Include="Areas\Interprete\Models\" />
     <Folder Include="Areas\Pedido\Models\" />
     <Folder Include="Areas\Pelicula\Models\" />

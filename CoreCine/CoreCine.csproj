@@ -60,6 +60,7 @@
     <Compile Include="DAAsiento.cs" />
     <Compile Include="DACinePelicula.cs" />
     <Compile Include="DADirector.cs" />
+    <Compile Include="DAFuncion.cs" />
     <Compile Include="DAInterprete.cs" />
     <Compile Include="DACine.cs" />
     <Compile Include="DAGeneral.cs" />
