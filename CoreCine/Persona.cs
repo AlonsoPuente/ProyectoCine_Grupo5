@@ -46,7 +46,9 @@ namespace CoreCine
         [MaxLength(8)]
         [Display(Name = "Número de documento (DNI)")]
         public Nullable<int> NroDocumento { get; set; }
+        [Display(Name = "Foto de la persona")]
         public string foto { get; set; }
+        [Display(Name = "Archivos del documento")]
         public string doc { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

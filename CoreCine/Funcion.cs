@@ -24,11 +24,11 @@ namespace CoreCine
         public int CodFuncion { get; set; }
         [Required]
         [Display(Name = "Hora de inicio")]
-        [DataType(DataType.Date)]
+        [DataType(DataType.DateTime)]
         public Nullable<System.DateTime> HoraInicio { get; set; }
         [Required]
         [Display(Name = "Hora de finalización")]
-        [DataType(DataType.Date)]
+        [DataType(DataType.DateTime)]
         public Nullable<System.DateTime> HoraFin { get; set; }
         [Required]
         [Display(Name = "Película (ID)")]

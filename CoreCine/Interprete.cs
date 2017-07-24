@@ -34,7 +34,9 @@ namespace CoreCine
         [Required]
         [Display(Name = "Nacionalidad del intérprete")]
         public string Nacionalidad { get; set; }
+        [Display(Name = "Foto del intérprete")]
         public string Foto { get; set; }
+        [Display(Name = "Bio del intérprete")]
         public string Bio { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
