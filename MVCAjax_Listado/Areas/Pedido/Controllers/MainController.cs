@@ -17,6 +17,7 @@ namespace MVCAjax_Listado.Areas.Pedido.Controllers
 
         public ActionResult ListadoPedido()
         {
+            ViewBag.ListadoTicket = DATicket.ListadoTicket();
             return PartialView(DAPedido.ListadoPedido());
         }
 

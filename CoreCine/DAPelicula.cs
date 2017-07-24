@@ -21,6 +21,18 @@ namespace CoreCine
             return listadoPelicula;
         }
 
+        static public List<Director> ListadoDirector()
+        {
+            List<Director> listadoDirector = new List<Director>();
+            using (var data = new CineDATABASEEntities())
+            {
+
+                listadoDirector = data.Director.ToList();
+
+            }
+            return listadoDirector;
+        }
+
         /// Registrar Pelicula
         //////////////////////////////////////////////////////
 

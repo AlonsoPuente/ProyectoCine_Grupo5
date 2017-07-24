@@ -1,7 +1,7 @@
 ﻿@model CoreCine.Ticket
 @using CoreCine
 @{
-
+    ViewBag.Title = "FormTicket";
     List<Asiento> ListadoAsiento = (List<Asiento>)ViewBag.ListadoAsiento;
     List<Persona> ListadoPersona = (List<Persona>)ViewBag.ListadoPersona;
     List<Funcion> ListadoFuncion = (List<Funcion>)ViewBag.ListadoFuncion;
@@ -18,7 +18,7 @@
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
-            @Html.LabelFor(model => model.Descripcion, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Descripcion, "Descripción", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Descripcion, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Descripcion, "", new { @class = "text-danger" })
@@ -26,27 +26,45 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CodAsiento, "CodAsiento", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.CodAsiento, "Asiento", htmlAttributes: new { @class = "control-label col-md-2" })
+            <select name="CodAsiento">
+                @foreach (Asiento item in ListadoAsiento)
+                {
+                    <option value="@item.CodAsiento">@item.DescripcionAsiento</option>
+                }
+            </select>
+            @*<div class="col-md-10">
                 @Html.DropDownList("CodAsiento", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.CodAsiento, "", new { @class = "text-danger" })
-            </div>
+            </div>*@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CodPersona, "CodPersona", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.CodPersona, "Persona", htmlAttributes: new { @class = "control-label col-md-2" })
+            <select name="CodPersona">
+                @foreach (Persona item in ListadoPersona)
+                {
+                    <option value="@item.CodPersona">@item.Paterno</option>
+                }
+            </select>
+            @*<div class="col-md-10">
                 @Html.DropDownList("CodPersona", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.CodPersona, "", new { @class = "text-danger" })
-            </div>
+            </div>*@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CodFuncion, "CodFuncion", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.CodFuncion, "Función", htmlAttributes: new { @class = "control-label col-md-2" })
+            <select name="CodFuncion">
+                @foreach (Funcion item in ListadoFuncion)
+                {
+                    <option value="@item.CodFuncion">@item.FechaFuncion</option>
+                }
+            </select>
+            @*<div class="col-md-10">
                 @Html.DropDownList("CodFuncion", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.CodFuncion, "", new { @class = "text-danger" })
-            </div>
+            </div>*@
         </div>
 
 

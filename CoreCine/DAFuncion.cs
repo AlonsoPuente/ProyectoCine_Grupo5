@@ -21,6 +21,18 @@ namespace CoreCine
             return listadoFuncion;
         }
 
+        static public List<Pelicula> ListadoPelicula()
+        {
+            List<Pelicula> listadoPelicula = new List<Pelicula>();
+            using (var data = new CineDATABASEEntities())
+            {
+
+                listadoPelicula = data.Pelicula.ToList();
+
+            }
+            return listadoPelicula;
+        }
+
         /// Registrar Funcion
         //////////////////////////////////////////////////////
 

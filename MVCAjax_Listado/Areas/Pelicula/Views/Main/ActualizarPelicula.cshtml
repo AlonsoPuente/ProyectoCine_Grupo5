@@ -1,4 +1,10 @@
 ﻿@model CoreCine.Pelicula
+@using CoreCine
+@{
+    ViewBag.Title = "ActualizarPelicula";
+    List<Director> ListaDirector = (List<Director>)ViewBag.ListadoDirector;
+
+}
 
 @using (Html.BeginForm())
 {
@@ -36,10 +42,16 @@
 
         <div class="form-group">
             @Html.LabelFor(model => model.CodDirector, "CodDirector", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <select name="CodDirector">
+                @foreach (Director item in ListaDirector)
+                {
+                    <option value="@item.CodDirector">@item.NombreDirector</option>
+                }
+            </select>
+            @*<div class="col-md-10">
                 @Html.DropDownList("CodDirector", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.CodDirector, "", new { @class = "text-danger" })                
-            </div>
+            </div>*@
         </div>
 
         <div class="form-group">
@@ -50,4 +62,3 @@
       
     </div>
 }
-

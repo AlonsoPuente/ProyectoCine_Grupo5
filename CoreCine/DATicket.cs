@@ -21,6 +21,42 @@ namespace CoreCine
             return listadoTicket;
         }
 
+        static public List<Asiento> ListadoAsiento()
+        {
+            List<Asiento> listadoAsiento = new List<Asiento>();
+            using (var data = new CineDATABASEEntities())
+            {
+
+                listadoAsiento = data.Asiento.ToList();
+
+            }
+            return listadoAsiento;
+        }
+
+        static public List<Persona> ListadoPersona()
+        {
+            List<Persona> listadoPersona = new List<Persona>();
+            using (var data = new CineDATABASEEntities())
+            {
+
+                listadoPersona = data.Persona.ToList();
+
+            }
+
+            return listadoPersona;
+        }
+
+        static public List<Funcion> ListadoFuncion()
+        {
+            List<Funcion> listadoFuncion = new List<Funcion>();
+            using (var data = new CineDATABASEEntities())
+            {
+
+                listadoFuncion = data.Funcion.ToList();
+
+            }
+            return listadoFuncion;
+        }
         /// Registrar Ticket
         //////////////////////////////////////////////////////
 

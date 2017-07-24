@@ -1,4 +1,10 @@
 ﻿@model CoreCine.Pedido
+@using CoreCine
+@{
+    ViewBag.Title = "FormPedido";
+    List<Ticket> ListaTicket = (List<Ticket>)ViewBag.ListadoTicket;
+
+}
 
 @using (Html.BeginForm())
 {
@@ -11,7 +17,7 @@
         @Html.HiddenFor(model => model.CodPedido)
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Descripcion, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Descripcion, "Descripción", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Descripcion, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Descripcion, "", new { @class = "text-danger" })
@@ -19,11 +25,17 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CodTicket, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.CodTicket, "Ticket", htmlAttributes: new { @class = "control-label col-md-2" })
+            <select name="CodTicket">
+                @foreach (Ticket item in ListaTicket)
+                {
+                    <option value="@item.CodTicket">@item.Descripcion</option>
+                }
+            </select>
+             @*<div class="col-md-10">
                 @Html.EditorFor(model => model.CodTicket, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.CodTicket, "", new { @class = "text-danger" })
-            </div>
+            </div>*@
         </div>
 
         <div class="form-group">
@@ -35,5 +47,5 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Regresar a Lista de Pedidos", "Index")
 </div>

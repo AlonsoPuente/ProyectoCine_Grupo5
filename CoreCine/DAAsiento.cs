@@ -21,6 +21,18 @@ namespace CoreCine
             return listadoAsiento;
         }
 
+        static public List<Sala> ListadoSala()
+        {
+            List<Sala> listadoSala = new List<Sala>();
+            using (var data = new CineDATABASEEntities())
+            {
+
+                listadoSala = data.Sala.ToList();
+
+            }
+            return listadoSala;
+        }
+
         /// Registrar Asiento
         //////////////////////////////////////////////////////
 

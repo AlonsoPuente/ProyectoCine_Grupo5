@@ -20,6 +20,18 @@ namespace CoreCine
             return listadoPedido;
         }
 
+        static public List<Ticket> ListadoTicket()
+        {
+            List<Ticket> listadoTicket = new List<Ticket>();
+            using (var data = new CineDATABASEEntities())
+            {
+
+                listadoTicket = data.Ticket.ToList();
+
+            }
+            return listadoTicket;
+        }
+
         /// Registrar Pedido
         //////////////////////////////////////////////////////
 
