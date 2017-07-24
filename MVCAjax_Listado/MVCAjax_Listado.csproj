@@ -159,6 +159,8 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\Asiento\AsientoAreaRegistration.cs" />
+    <Compile Include="Areas\Asiento\Controllers\MainController.cs" />
     <Compile Include="Areas\CinePelicula\CinePeliculaAreaRegistration.cs" />
     <Compile Include="Areas\CinePelicula\Controllers\MainController.cs" />
     <Compile Include="Areas\Cine\CineAreaRegistration.cs" />
@@ -260,6 +262,13 @@
     <Content Include="Areas\CinePelicula\Views\Main\ListadoCinePelicula.cshtml" />
     <Content Include="Areas\CinePelicula\Views\Main\ActualizarCinePelicula.cshtml" />
     <Content Include="Areas\CinePelicula\Views\Main\FormCinePelicula.cshtml" />
+    <Content Include="Areas\Asiento\Views\web.config" />
+    <Content Include="Areas\Asiento\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Asiento\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Asiento\Views\Main\Index.cshtml" />
+    <Content Include="Areas\Asiento\Views\Main\ListadoAsiento.cshtml" />
+    <Content Include="Areas\Asiento\Views\Main\ActualizarAsiento.cshtml" />
+    <Content Include="Areas\Asiento\Views\Main\FormAsiento.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -310,6 +319,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Asiento\Models\" />
     <Folder Include="Areas\CinePelicula\Models\" />
     <Folder Include="Areas\Cine\Models\" />
     <Folder Include="Areas\Director\Models\" />

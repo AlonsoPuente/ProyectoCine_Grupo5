@@ -94,3 +94,15 @@ C:\Users\user\Desktop\CIne\ProyectoCine_Grupo55\CoreCine\bin\Debug\es\EntityFram
 C:\Users\user\Desktop\CIne\ProyectoCine_Grupo55\CoreCine\obj\Debug\CoreCine.csprojResolveAssemblyReference.cache
 C:\Users\user\Desktop\CIne\ProyectoCine_Grupo55\CoreCine\obj\Debug\CoreCine.dll
 C:\Users\user\Desktop\CIne\ProyectoCine_Grupo55\CoreCine\obj\Debug\CoreCine.pdb
+C:\Users\user\Desktop\CIne\ProyectoCine_Grupo56\CoreCine\bin\Debug\CoreCine.dll.config
+C:\Users\user\Desktop\CIne\ProyectoCine_Grupo56\CoreCine\bin\Debug\CoreCine.dll
+C:\Users\user\Desktop\CIne\ProyectoCine_Grupo56\CoreCine\bin\Debug\CoreCine.pdb
+C:\Users\user\Desktop\CIne\ProyectoCine_Grupo56\CoreCine\bin\Debug\EntityFramework.dll
+C:\Users\user\Desktop\CIne\ProyectoCine_Grupo56\CoreCine\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\user\Desktop\CIne\ProyectoCine_Grupo56\CoreCine\bin\Debug\EntityFramework.xml
+C:\Users\user\Desktop\CIne\ProyectoCine_Grupo56\CoreCine\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\user\Desktop\CIne\ProyectoCine_Grupo56\CoreCine\bin\Debug\es\EntityFramework.resources.dll
+C:\Users\user\Desktop\CIne\ProyectoCine_Grupo56\CoreCine\bin\Debug\es\EntityFramework.SqlServer.resources.dll
+C:\Users\user\Desktop\CIne\ProyectoCine_Grupo56\CoreCine\obj\Debug\CoreCine.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\CIne\ProyectoCine_Grupo56\CoreCine\obj\Debug\CoreCine.dll
+C:\Users\user\Desktop\CIne\ProyectoCine_Grupo56\CoreCine\obj\Debug\CoreCine.pdb

@@ -57,6 +57,7 @@
     <Compile Include="CinePelicula.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="DAAsiento.cs" />
     <Compile Include="DACinePelicula.cs" />
     <Compile Include="DADirector.cs" />
     <Compile Include="DAInterprete.cs" />
