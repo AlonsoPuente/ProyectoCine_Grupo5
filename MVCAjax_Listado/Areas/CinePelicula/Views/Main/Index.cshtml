@@ -1,0 +1,128 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>LISTADO DE LOS CINE - PELICULAS</h2>
+
+<input type="button" class="btn btn btn-info" name="name" value="Nueva Cine Peliculas" id="btnRegistro" />
+
+<div id="divListadoCinePeliculas">
+</div>
+
+
+<div id="modalForm" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="gridSystemModalLabel">Añadiendo nuevo Cine Peliculas</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-4">.col-md-4</div>
+                    <div class="col-md-4 col-md-offset-4">.col-md-4 .col-md-offset-4</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-md-offset-3">.col-md-3 .col-md-offset-3</div>
+                    <div class="col-md-2 col-md-offset-4">.col-md-2 .col-md-offset-4</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">.col-md-6 .col-md-offset-3</div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-9">
+                        Level 1: .col-sm-9
+                        <div class="row">
+                            <div class="col-xs-8 col-sm-6">
+                                Level 2: .col-xs-8 .col-sm-6
+                            </div>
+                            <div class="col-xs-4 col-sm-6">
+                                Level 2: .col-xs-4 .col-sm-6
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+
+                <button type="button" class="btn btn-primary" id="btnGuardar">Guardar</button>
+
+
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<script>
+    ListadoCinePeliculas();
+
+    function ListadoCinePeliculas() {
+
+        $.ajax({
+            url: "/CinePelicula/Main/ListadoCinePelicula",
+            cache: false,
+            success: function (html) {
+                $("#divListadoCinePeliculas").html(html);
+            }
+        });
+
+
+    }
+
+    $('#btnRegistro').click(function () {
+        //alert("Ando bien")
+        var modal = $("#modalForm");
+        $.ajax({
+            type: "POST",
+            url: "/CinePelicula/Main/FormCinePelicula",
+            success: function (html) {
+                modal.find(".modal-body").html(html);
+                modal.modal();
+            }
+        });
+    });
+
+    $('#btnGuardar').click(function () {
+
+
+        var modal = $("#modalForm");
+
+        var vCodCine = modal.find(".modal-body #CodCine").val()
+        var vCodPelicula = modal.find(".modal-body #CodPelicula").val()
+        var vEnCartelera = modal.find(".modal-body #EnCartelera").val()
+
+        $.ajax({
+            type: "POST",
+            url: "/CinePelicula/Main/GrabarCinePelicula",
+
+            data: {
+
+                CodCine: vCodCine,
+                CodPelicula: vCodPelicula,
+                EnCartelera: vEnCartelera,
+
+            },
+
+            success: function (html) {
+                //modal.find(".modal-body").html(html);
+                //modal.modal();
+                //modal.hide();
+
+                ListadoCinePeliculas();
+
+                alert("Datos correctamento guardados")
+            }
+
+        });
+
+    });
+
+
+
+</script>
+
+

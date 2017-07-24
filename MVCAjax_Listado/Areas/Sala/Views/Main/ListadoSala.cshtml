@@ -1,0 +1,57 @@
+﻿@model IEnumerable<CoreCine.Sala>
+
+@using CoreCine
+@{
+
+    List<Cine> ListadoCine = (List<Cine>)ViewBag.ListadoCine;
+
+}
+
+}
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreSala)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Capacidad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tipo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cine.NombreCine)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreSala)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Capacidad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tipo)
+        </td>
+        <td>
+            @foreach (Cine item3 in ListadoCine.Where(z => z.CodCine == item.CodCine).ToList())
+            {
+                @item3.NombreCine   
+            }
+
+        </td>
+        <td>
+
+            @Html.ActionLink("Actualizar Sala", "ActualizarSala", "Main", new { area = "Sala", CodSala = item.CodSala }, null) |
+            @Html.ActionLink("Eliminar Sala", "Eliminar", new { area = "Sala", CodSala = item.CodSala }, null)
+
+        </td>
+    </tr>
+}
+
+</table>

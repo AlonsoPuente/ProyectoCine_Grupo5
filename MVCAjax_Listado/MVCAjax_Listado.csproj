@@ -159,6 +159,8 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\CinePelicula\CinePeliculaAreaRegistration.cs" />
+    <Compile Include="Areas\CinePelicula\Controllers\MainController.cs" />
     <Compile Include="Areas\Cine\CineAreaRegistration.cs" />
     <Compile Include="Areas\Cine\Controllers\MainController.cs" />
     <Compile Include="Areas\Director\Controllers\MainController.cs" />
@@ -171,6 +173,8 @@
     <Compile Include="Areas\Pelicula\PeliculaAreaRegistration.cs" />
     <Compile Include="Areas\Persona\Controllers\MainController.cs" />
     <Compile Include="Areas\Persona\PersonaAreaRegistration.cs" />
+    <Compile Include="Areas\Sala\Controllers\MainController.cs" />
+    <Compile Include="Areas\Sala\SalaAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -242,6 +246,20 @@
     <Content Include="Areas\Pelicula\Views\Main\ListadoPelicula.cshtml" />
     <Content Include="Areas\Pelicula\Views\Main\ActualizarPelicula.cshtml" />
     <Content Include="Areas\Pelicula\Views\Main\FormPelicula.cshtml" />
+    <Content Include="Areas\Sala\Views\web.config" />
+    <Content Include="Areas\Sala\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Sala\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Sala\Views\Main\Index.cshtml" />
+    <Content Include="Areas\Sala\Views\Main\ListadoSala.cshtml" />
+    <Content Include="Areas\Sala\Views\Main\ActualizarSala.cshtml" />
+    <Content Include="Areas\Sala\Views\Main\FormSala.cshtml" />
+    <Content Include="Areas\CinePelicula\Views\web.config" />
+    <Content Include="Areas\CinePelicula\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\CinePelicula\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\CinePelicula\Views\Main\Index.cshtml" />
+    <Content Include="Areas\CinePelicula\Views\Main\ListadoCinePelicula.cshtml" />
+    <Content Include="Areas\CinePelicula\Views\Main\ActualizarCinePelicula.cshtml" />
+    <Content Include="Areas\CinePelicula\Views\Main\FormCinePelicula.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -292,12 +310,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\CinePelicula\Models\" />
     <Folder Include="Areas\Cine\Models\" />
     <Folder Include="Areas\Director\Models\" />
     <Folder Include="Areas\Interprete\Models\" />
     <Folder Include="Areas\Pedido\Models\" />
     <Folder Include="Areas\Pelicula\Models\" />
     <Folder Include="Areas\Persona\Models\" />
+    <Folder Include="Areas\Sala\Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

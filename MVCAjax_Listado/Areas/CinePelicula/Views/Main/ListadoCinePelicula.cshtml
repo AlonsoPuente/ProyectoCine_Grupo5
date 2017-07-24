@@ -1,0 +1,54 @@
+﻿@model IEnumerable<CoreCine.CinePelicula>
+@using CoreCine
+@{
+
+    List<Cine> ListadoCine = (List<Cine>)ViewBag.ListadoCine;
+    List<Pelicula> ListadoPelicula = (List<Pelicula>)ViewBag.ListadoPelicula;
+
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.EnCartelera)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cine.NombreCine)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pelicula.NombrePelicula)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.EnCartelera)
+        </td>
+        <td>
+
+            @foreach (Cine item2 in ListadoCine.Where(z => z.CodCine == item.CodCine).ToList())
+            {
+                @item2.NombreCine
+            }
+
+        </td>
+        <td>
+
+            @foreach (Pelicula item2 in ListadoPelicula.Where(z => z.CodPelicula == item.CodPelicula).ToList())
+            {
+                @item2.NombrePelicula
+            }
+
+        </td>
+        <td>
+
+            @Html.ActionLink("Actualizar Cine Pelicula", "ActualizarCinePelicula", "Main", new { area = "CinePelicula", CodCine = item.CodCine }, null) |
+            @Html.ActionLink("Eliminar CinePelicula", "Eliminar", new { area = "CinePelicula", CodCine = item.CodCine }, null)
+
+        </td>
+    </tr>
+}
+
+</table>
